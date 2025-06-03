@@ -3,7 +3,7 @@ import {TelemetryIngestModule} from './telemetry-ingest.module'
 import {Logger, ValidationPipe} from '@nestjs/common'
 import {NestExpressApplication} from '@nestjs/platform-express'
 
-async function bootstrap() {
+async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(
     TelemetryIngestModule,
   )
@@ -25,4 +25,5 @@ async function bootstrap() {
     `TELEMETRY-INGEST APP STARTED, port: ${PORT}, env: ${process.env.ENVIRONMENT}`,
   )
 }
+
 bootstrap()
