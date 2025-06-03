@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/telemetry-ingest/src",
+  "compilerOptions": {
+    "assets": ["**/*.json"],
+    "deleteOutDir": true,
+    "webpack": true,
+    "watchAssets": true,
+    "tsConfigPath": "apps/telemetry-ingest/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/telemetry-ingest",
+  "projects": {
+    "telemetry-ingest": {
+      "type": "application",
+      "root": "apps/telemetry-ingest",
+      "entryFile": "main",
+      "sourceRoot": "apps/telemetry-ingest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/telemetry-ingest/tsconfig.app.json"
+      }
+    }
+  }
+}
