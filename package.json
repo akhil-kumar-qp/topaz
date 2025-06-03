@@ -65,7 +65,11 @@
     "coverageDirectory": "./coverage",
     "testEnvironment": "node",
     "roots": [
-      "<rootDir>/apps/"
-    ]
+      "<rootDir>/apps/",
+      "<rootDir>/libs/"
+    ],
+    "moduleNameMapper": {
+      "^@lib/http-infra(|/.*)$": "<rootDir>/libs/http-infra/src/$1"
+    }
   }
 }

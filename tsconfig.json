@@ -18,8 +18,18 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@telemetry-ingest-src": ["./apps/telemetry-ingest/src"],
-      "@telemetry-ingest-src/*": ["./apps/telemetry-ingest/src/*"]
+      "@telemetry-ingest-src": [
+        "./apps/telemetry-ingest/src"
+      ],
+      "@telemetry-ingest-src/*": [
+        "./apps/telemetry-ingest/src/*"
+      ],
+      "@lib/http-infra": [
+        "libs/http-infra/src"
+      ],
+      "@lib/http-infra/*": [
+        "libs/http-infra/src/*"
+      ]
     }
   }
 }

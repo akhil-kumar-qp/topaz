@@ -3,7 +3,9 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "apps/telemetry-ingest/src",
   "compilerOptions": {
-    "assets": ["**/*.json"],
+    "assets": [
+      "**/*.json"
+    ],
     "deleteOutDir": true,
     "webpack": true,
     "watchAssets": true,
@@ -19,6 +21,15 @@
       "sourceRoot": "apps/telemetry-ingest/src",
       "compilerOptions": {
         "tsConfigPath": "apps/telemetry-ingest/tsconfig.app.json"
+      }
+    },
+    "http-infra": {
+      "type": "library",
+      "root": "libs/http-infra",
+      "entryFile": "index",
+      "sourceRoot": "libs/http-infra/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/http-infra/tsconfig.lib.json"
       }
     }
   }
