@@ -29,6 +29,12 @@
       ],
       "@lib/http-infra/*": [
         "libs/http-infra/src/*"
+      ],
+      "@lib/data-infra": [
+        "libs/data-infra/src"
+      ],
+      "@lib/data-infra/*": [
+        "libs/data-infra/src/*"
       ]
     }
   }

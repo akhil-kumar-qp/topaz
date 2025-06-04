@@ -31,6 +31,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/http-infra/tsconfig.lib.json"
       }
+    },
+    "data-infra": {
+      "type": "library",
+      "root": "libs/data-infra",
+      "entryFile": "index",
+      "sourceRoot": "libs/data-infra/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/data-infra/tsconfig.lib.json"
+      }
     }
   }
 }

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^10.2.6",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^10.2.6",
     "@nestjs/platform-express": "^10.2.6",
     "class-transformer": "^0.5.1",
@@ -69,7 +70,8 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@lib/http-infra(|/.*)$": "<rootDir>/libs/http-infra/src/$1"
+      "^@lib/http-infra(|/.*)$": "<rootDir>/libs/http-infra/src/$1",
+      "^@lib/data-infra(|/.*)$": "<rootDir>/libs/data-infra/src/$1"
     }
   }
 }
