@@ -4,6 +4,7 @@ import {join} from 'path'
 import {TelemetryIngestAppConfig} from './telemetry-ingest-app-config.interface'
 import {MetadataConfig} from './metadata-config.interface'
 import {EnvConfig} from './env-config.interface'
+import {PostgresConfig} from './postgres-config.interface'
 
 export const loadEnvConfig = (): EnvConfig => {
   const environment = process.env.ENVIRONMENT || 'development'
@@ -20,6 +21,7 @@ export const loadEnvConfig = (): EnvConfig => {
 export const setupConfig = (): [
   ConfigFactory<TelemetryIngestAppConfig>,
   ConfigFactory<MetadataConfig>,
+  ConfigFactory<PostgresConfig>,
 ] => {
   const envConfig = loadEnvConfig()
 
@@ -33,7 +35,12 @@ export const setupConfig = (): [
     () => envConfig.metadata,
   )
 
-  return [telemetryIngestAppConfig, metadataConfig]
+  const postgresConfig = registerAs<PostgresConfig>(
+    'postgres',
+    () => envConfig.postgres,
+  )
+
+  return [telemetryIngestAppConfig, metadataConfig, postgresConfig]
 }
 
 export function getConfigOrThrow<T>(
