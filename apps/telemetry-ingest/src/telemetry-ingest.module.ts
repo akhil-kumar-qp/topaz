@@ -5,9 +5,10 @@ import {APP_FILTER, APP_PIPE} from '@nestjs/core'
 import {AllExceptionsFilter} from '@lib/http-infra/exceptions/all-exceptions.filter'
 import {setupValidationPipe} from '@lib/http-infra/exceptions/setup-validation-pipe.method'
 import {DataInfraModule} from 'libs/data-infra/data-infra.module'
+import {MouseTrackModule} from './modules/mouse-track/mouse-track.module'
 
 @Module({
-  imports: [DataInfraModule],
+  imports: [DataInfraModule, MouseTrackModule],
   controllers: [TelemetryIngestController],
   providers: [
     TelemetryIngestService,

@@ -7,7 +7,7 @@
       "**/*.json"
     ],
     "deleteOutDir": true,
-    "webpack": true,
+    "webpack": false,
     "watchAssets": true,
     "tsConfigPath": "apps/telemetry-ingest/tsconfig.app.json"
   },
