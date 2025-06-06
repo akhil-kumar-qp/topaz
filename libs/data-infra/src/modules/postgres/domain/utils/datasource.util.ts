@@ -1,3 +1,3 @@
-export function getPostgresDataSource(): string {
+export function getDataSource(): string {
   return 'topaz'
 }

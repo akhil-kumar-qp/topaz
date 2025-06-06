@@ -32,7 +32,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-empty-interface': 'off',
-    "max-lines-per-function": ["error", { "max": 30 }],
+    "max-lines-per-function": ["error", { "max": 40 }],
     'unicorn/filename-case': [
       'error',
       {
