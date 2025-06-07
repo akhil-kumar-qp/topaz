@@ -12,7 +12,7 @@ services:
       - pgTelemetryData:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=telemetry
-      - POSTGRES_USER=  
+      - POSTGRES_USER=db_user  
       - POSTGRES_PASSWORD=db_password
       - POSTGRES_PORT=5444
     healthcheck:
