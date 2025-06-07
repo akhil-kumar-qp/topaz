@@ -21,7 +21,8 @@
     "typeorm:cli:migration-run": "npm run typeorm:cli -- migration:run -d ./ormconfig.ts",
     "typeorm:cli:migration-revert": "npm run typeorm:cli -- migration:revert -d ./ormconfig.ts",
     "typeorm:cli:migration-run:ci": "npm run typeorm:cli:ci -- migration:run -d ./ormconfig.ts",
-    "typeorm:cli:migration-revert:ci": "npm run typeorm:cli:ci -- migration:revert -d ./ormconfig.ts"
+    "typeorm:cli:migration-revert:ci": "npm run typeorm:cli:ci -- migration:revert -d ./ormconfig.ts",
+    "start-performance": "ts-node ./performance/zombie-script.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.2.6",
@@ -29,6 +30,7 @@
     "@nestjs/core": "^10.2.6",
     "@nestjs/platform-express": "^10.2.6",
     "@nestjs/typeorm": "^11.0.0",
+    "axios": "^1.9.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
     "pg": "^8.16.0",
