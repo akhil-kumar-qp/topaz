@@ -5,4 +5,8 @@ export class TelemetryIngestService {
   getHello(): string {
     return `Hello From ${TelemetryIngestService.name}`
   }
+
+  getHealth(): string {
+    return 'Up'
+  }
 }
