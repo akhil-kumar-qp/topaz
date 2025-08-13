@@ -12,6 +12,7 @@ describe('TelemetryIngestController (e2e)', () => {
     }).compile()
 
     app = moduleFixture.createNestApplication()
+    app.setGlobalPrefix('/telemetry-ingest/api')
     await app.init()
   })
 
@@ -19,6 +20,17 @@ describe('TelemetryIngestController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/telemetry-ingest/api')
       .expect(200)
-      .expect('Hello From TelemetryIngestService')
+      .expect((res) => {
+        expect(res.body).toEqual({ data: 'Hello From TelemetryIngestService' })
+      })
+  })
+
+  it('/telemetry-ingest/api/health (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/telemetry-ingest/api/health')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toEqual({ data: 'Up' })
+      })
   })
 })

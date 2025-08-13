@@ -13,4 +13,9 @@ export class TelemetryIngestController {
   getHello(): SuccessResponse<string> {
     return ResponseUtil.success(this.telemetryIngestService.getHello())
   }
+
+  @Get('health')
+  getHealth(): SuccessResponse<string> {
+    return ResponseUtil.success(this.telemetryIngestService.getHealth())
+  }
 }
